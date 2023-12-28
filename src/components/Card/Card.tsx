@@ -27,6 +27,7 @@ export const Card: FC<CardProps> = ({
   const toggleMouseOver = () => setMouseOver((prev) => !prev);
 
   const router = useRouter();
+
   const onFilmClick = () => {
     router.push(`/movie/${id}`);
   };
@@ -57,9 +58,9 @@ export const Card: FC<CardProps> = ({
         <span>
           Rating: <b>{rating}</b>
         </span>
-        <div className="flex justify-beetwen mt-auto items-center">
-          <span className=" font-extrabold ">{genre}</span>
-          <button className="border-2 border-black ml-auto mt-auto p-2 rounded-md hover:bg-black hover:text-white">
+        <div className="flex justify-beetwen mt-auto items-center max-sm:flex-col max-sm:items-start">
+          <span className=" font-extrabold max-sm:mb-2">{genre}</span>
+          <button className="border-2 border-black ml-auto mt-auto p-2 rounded-md hover:bg-black hover:text-white max-sm:ml-0">
             Go to the film
           </button>
         </div>

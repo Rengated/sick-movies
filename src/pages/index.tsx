@@ -10,7 +10,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 export default function Home() {
   const [films, setFilms] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-
   const [checked, setChecked] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +51,7 @@ export default function Home() {
               </h1>
             </div>
             <InfiniteScroll
-              dataLength={films.length}
+              dataLength={films?.length}
               next={fetchMoreData}
               hasMore={true}
               loader={""}>
